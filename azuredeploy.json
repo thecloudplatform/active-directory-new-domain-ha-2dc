@@ -78,8 +78,6 @@
     "adVMSize": "Standard_D2_v2",
     "adLBFE": "DCLBFE",
     "adLBBE": "DCLBBE",
-    "nsgName": "NSG",
-    "nsgID": "[resourceId('Microsoft.Network/networkSecurityGroups',variables('nsgName'))]",
     "adPDCRDPNAT": "DC1RDP",
     "adBDCRDPNAT": "DC2RDP",
     "virtualNetworkName": "The-Demo-Platform",
@@ -112,29 +110,6 @@
     "adBDCConfigurationFunction": "ConfigureADBDC.ps1\\ConfigureADBDC"
   },
   "resources": [
-    {
-       "name": "[variables('nsgName')]",
-       "type": "Microsoft.Network/networkSecurityGroups",
-       "location": "[resourceGroup().location]",
-       "apiVersion": "2015-06-15",
-       "properties": {
-         "securityRules": [
-           {
-             "name": "rule1",
-             "properties": {
-               "protocol": "*",
-               "sourcePortRange": "*",
-               "destinationPortRange": "*",
-               "sourceAddressPrefix": "*",
-               "destinationAddressPrefix": "*",
-               "access": "Allow",
-               "priority": 101,
-               "direction": "Inbound"
-             }
-           }
-         ]
-       }
-     },
     {
       "name": "[variables('vhdStorageAccountName')]",
       "type": "Microsoft.Storage/storageAccounts",
