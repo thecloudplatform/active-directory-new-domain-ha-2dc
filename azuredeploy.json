@@ -20,7 +20,7 @@
       "metadata": {
         "description": "The FQDN of the AD Domain created "
       },
-      "defaultValue": "internal.demoplatform.co.uk"
+      "defaultValue": "internal.thedemoplatform.co.uk"
     },
     "dnsPrefix": {
       "type": "string",
@@ -59,7 +59,7 @@
     }
   },
   "variables": {
-    "vhdStorageAccountName": "[concat('vhds', uniqueString(resourceGroup().id))]",
+    "vhdStorageAccountName": "thedemoplatformstorage",
     "storageAccountType": "Standard_LRS",
     "adPDCVMName": "DC1",
     "adBDCVMName": "DC2",
@@ -69,11 +69,11 @@
     "adAvailabilitySetName": "DCAvailabilitySet",
     "publicIPAddressName": "DCPublicIP",
     "adVMSize": "Standard_D2_v2",
-    "adLBFE": "LBFE",
-    "adLBBE": "LBBE",
+    "adLBFE": "DCLBFE",
+    "adLBBE": "DCLBBE",
     "adPDCRDPNAT": "DC1RDP",
     "adBDCRDPNAT": "DC2RDP",
-    "virtualNetworkName": "The-Demo-Platform-VNET",
+    "virtualNetworkName": "The-Demo-Platform",
     "virtualNetworkAddressRange": "10.0.0.0/16",
     "adSubnetName": "Subnet",
     "adSubnet": "10.0.0.0/24",
