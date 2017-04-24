@@ -574,6 +574,9 @@
           "domainName": {
             "value": "[parameters('domainName')]"
           },
+          "DomainNetBIOSName": {
+            "value": "[parameters('DomainNetBIOSName')]"
+          },
           "adBDCConfigurationFunction": {
             "value": "[variables('adBDCConfigurationFunction')]"
           },
