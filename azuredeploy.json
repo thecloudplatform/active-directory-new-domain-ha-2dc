@@ -22,6 +22,13 @@
       },
       "defaultValue": "internal.thedemoplatform.co.uk"
     },
+    "DomainNetBIOSName": {
+      "type": "string",
+      "metadata": {
+        "description": "The NetBIOS of the AD Domain created (max 15 characters)"
+      },
+      "defaultValue": "thedemoplatform"
+    },
     "dnsPrefix": {
       "type": "string",
       "metadata": {
