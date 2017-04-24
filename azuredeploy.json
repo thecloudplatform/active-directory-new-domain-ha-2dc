@@ -362,6 +362,7 @@
               "ConfigurationFunction": "[variables('adPDCConfigurationFunction')]",
               "Properties": {
                 "DomainName": "[parameters('domainName')]",
+                "DomainNetBIOSName": "[('DomainNetBIOSName')]
                 "AdminCreds": {
                   "UserName": "[parameters('adminUserName')]",
                   "Password": "PrivateSettingsRef:AdminPassword"
