@@ -17,6 +17,9 @@
     "domainName": {
       "type": "string"
     },
+    "DomainNetBIOSName": {
+      "type": "securestring"
+    },
     "adBDCConfigurationFunction": {
       "type": "string"
     },
@@ -41,6 +44,7 @@
           "configurationFunction": "[parameters('adBDCConfigurationFunction')]",
           "properties": {
             "domainName": "[parameters('domainName')]",
+            "DomainNetBIOSName": "[parameters('DomainNetBIOSName')]",
             "adminCreds": {
               "userName": "[parameters('adminUserName')]",
               "password": "privateSettingsRef:adminPassword"
